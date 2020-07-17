@@ -1,5 +1,5 @@
 /**
- * Upload a file to an existing bucket
+ * Uploads a text/html type file to an existing bucket
  * argv[2]: BUCKET_NAME
  * argv[3]: FILE_NAME
  */
@@ -11,7 +11,12 @@ var AWS = require('aws-sdk');
 s3 = new AWS.S3({ apiVersion: '2006-03-01' });
 
 // call S3 to retrieve upload file to specified bucket
-var uploadParams = { Bucket: process.argv[2], Key: '', Body: '' };
+var uploadParams = {
+  Bucket: process.argv[2],
+  Key: '',
+  Body: '',
+  ContentType: 'text/html',
+};
 var file = process.argv[3];
 
 // Configure the file stream and obtain the upload parameters

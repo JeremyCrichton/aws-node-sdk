@@ -6,8 +6,8 @@ const cloudfront = new AWS.CloudFront({ apiVersion: '2019-03-26' });
 // Create caller reference
 // @TODO: update prefix
 const callerReference = 'jade-' + uuid.v4();
-const originDomainName = 'test-bucket-jc-jul-15.s3.amazonaws.com';
-const originId = 'S3-test-bucket-jc-jul-15'; // unique ID of origin within the distribution
+const originDomainName = 'jc-test-bucket-rest.s3.amazonaws.com';
+const originId = 'S3-jc-test-bucket-rest'; // unique ID of origin within the distribution
 
 const distParams = {
   DistributionConfig: {

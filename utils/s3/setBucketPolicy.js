@@ -1,5 +1,5 @@
 /**
- * Create a simple bucket policy
+ * Create a simple bucket policy that allows public read access
  * argv[2]: BUCKET_NAME
  */
 
