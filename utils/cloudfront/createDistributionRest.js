@@ -1,3 +1,7 @@
+/**
+ * - Run this file with endpoint from static website hosting dialog box without the leading http://
+ */
+
 const AWS = require('aws-sdk');
 var uuid = require('uuid');
 
@@ -6,8 +10,8 @@ const cloudfront = new AWS.CloudFront({ apiVersion: '2019-03-26' });
 // Create caller reference
 // @TODO: update prefix
 const callerReference = 'jade-' + uuid.v4();
-const originDomainName = 'jc-test-bucket-rest.s3.amazonaws.com';
-const originId = 'S3-jc-test-bucket-rest'; // unique ID of origin within the distribution
+const originDomainName = 'jc-test-bucket-and-upload.s3.amazonaws.com';
+const originId = 'S3-jc-test-bucket-and-upload'; // unique ID of origin within the distribution
 
 const distParams = {
   DistributionConfig: {
